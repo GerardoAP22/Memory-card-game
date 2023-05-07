@@ -32,7 +32,7 @@ The game starts with all the cards face down and player has to turn over two car
 
 - As a player I would like to be able to restart the game after a win.
 
-- As a player, I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.\*\*
+- As a player, I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.
 
 #### Stretch Goals
 
