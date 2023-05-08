@@ -2,43 +2,116 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-h1{
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+h1 {
     font-size: 70px;
     font-weight: bold;
     color: #e01616;
     text-align: center;
-  
+    margin: 50px;
+    font-family: "Press+Start+2P";
 }
+
 body {
     height: 100vh;
     display: grid;
-    background: #060AB2;
-  }
-  .memory-card {
+    background: grey;
+}
+
+.memory-game {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 89%;
+    height: 100%;
+}
+
+.memory-card {
     width: 200px;
     height: 200px;
     position: relative;
     perspective: 1000px;
-  }
-  
-  .memory-card img {
+    transform-style: preserve-3d;
+    margin-left: 40%;
+   
+}
+
+.memory-card:nth-child(odd) {
+    grid-row: 1 / 2;
+}
+
+.memory-card:nth-child(even) {
+    grid-row: 2 / 3;
+}
+
+.memory-card:nth-child(1),
+.memory-card:nth-child(2) {
+    grid-column: 1 / 2;
+}
+
+.memory-card:nth-child(3),
+.memory-card:nth-child(4) {
+    grid-column: 2 / 3;
+}
+
+.memory-card:nth-child(5),
+.memory-card:nth-child(6) {
+    grid-column: 3 / 4;
+}
+
+.memory-card img {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     transition: transform 0.6s ease;
-  }
-  
-  .memory-card img.back-side {
+    box-shadow: #e01616;
+
+}
+
+.memory-card img.back-side {
     transform: rotateY(180deg);
-  }
-  
-  .memory-card.flipped img.front-side {
+}
+
+.memory-card.flipped img.front-side {
     transform: rotateY(-180deg);
-  }
-  
-  .memory-card.flipped img.back-side {
+}
+
+.memory-card.flipped img.back-side {
     transform: rotateY(0deg);
-  }
-  
+}
+
+.reset-game{
+    position: bottom center;
+    padding: 30px 30px 30px 30px;
+
+}
+button{
+    border-radius: 50%;
+    width:50%;
+   text-align: center;
+   justify-content: center;
+   margin: 5%;
+   height: 30%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+}
+

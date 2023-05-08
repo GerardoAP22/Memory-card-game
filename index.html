@@ -10,10 +10,10 @@
 
 </head>
 <body>
-    <h1 id ="title">Memory-Card-Game</h1>
-
-
-        <section class="memory-game">  <!--created a section for all the crads to be held inside-->
+    <h1 class="title">Memory-Card-Game</h1>
+        <section class="memory-game"> 
+          
+           <!--created a section for all the crads to be held inside-->
             <div class="memory-card"><!-- class that has the front and back of the card-->
                 <img class="front-side" src=images/100949730_2978077415574627_5013566782623973376_n.png alt="general assembly" id="GA">
                 <img class="back-side" src="images/3a0d6cfb88ca658a4affa1ad1dabf9bc.jpg" alt="general assembly" id="goku">
@@ -64,7 +64,11 @@
                 <img class="front-side"src="images/100949730_2978077415574627_5013566782623973376_n.png" alt="general assembly" id="GA">
                 <img class="back-side" src="images/fd13fd92d4b3d0ac97a1070ae5156d56.jpg" alt="kilua" id="kilua">
             </div>
+            
         </section>
-        <button class="reset-game">Reset!</button><!--button that needs to reset the whole game-->
+        <p>Score: <span class="score"></span></p>
+        <div class="flex">
+            <button id="reset-game">Reset!</button><!--button that needs to reset the whole game-->
+        </div>
 </body>
 </html>
