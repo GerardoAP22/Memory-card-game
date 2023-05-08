@@ -30,6 +30,7 @@ The game starts with all the cards face down and player has to turn over two car
 - As a player, I want my game to recognize once all the cards have been matched to know that the game is over.
 
 - As a player, id like to know if my card that matched were recognized by game.
+
 - As a player, i would like when i click on a card it will turn over to a different image
 
 - As a player I would like to be able to restart the game after a win.
@@ -45,3 +46,5 @@ The game starts with all the cards face down and player has to turn over two car
 - As a player, I would like to hear an audible sound when I flip a card, so that I know my selection worked.
 
 - As a player, I would like to see a variety of unique card designs in the game, so that it is visually appealing and adds to the challenge of remembering each card's location.
+
+- As a player, I would like a themed card game.
