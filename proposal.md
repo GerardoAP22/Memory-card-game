@@ -1,6 +1,5 @@
 
-# Project Proposal Example
-
+# Project Proposal 
 
 ## Project Choice 
 
