@@ -8,7 +8,7 @@
 ## initial image
 
 
-![](images/memory-game-card.png)
+![](images/memory-game-card-game.png)
 
 ## all cardes matched 
 
