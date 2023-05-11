@@ -7,7 +7,12 @@
 
 ## initial image
 
-![](images/memor-game-cards.png)
+
+![](images/memory-game-card.png)
+
+## all cardes matched 
+
+![](images/victory-image.png)
 
 
  ## Technologies Used:
@@ -16,30 +21,46 @@
 
 
  ## Getting Started: 
-  - game deployed!
+  - Deploy game and match them all!!!
 
 
  https://eclectic-shortbread-27bbb8.netlify.app
 
+ ## Next steps
+
+ - Create a victory animation.
+ - change the title of the animation once all cards are matched.
+
  ## frequent commits
-Commits on May 11, 2023
- mvp is in
- 
-Commits on May 10, 2023
-lots of modification
+### Commits on May 11, 2023
 
-Commits on May 9, 2023
-added a reset button & addes the shuffle of the cards
+- mvps met added sounds to first and second click with a victory sound;
 
-Commits on May 8, 2023
-game Layout set
+ - mvp is in;
 
-Commits on May 7, 2023
-proposal final
+ ### Commits on May 10, 2023
+
+- lots of modification;
+
+### Commits on May 9, 2023
+
+- added a reset button & addes the shuffle of the cards;
+
+### Commits on May 8, 2023
+
+- game Layout set;
+
+### Commits on May 7, 2023
+
+- proposal final;
  
-Commits on May 6, 2023
-personal test
+### Commits on May 6, 2023
+
+- personal test;
  
-Commits on May 5, 2023
-first commit
+### Commits on May 5, 2023
+
+ - first commit;
+
+
 

@@ -55,6 +55,8 @@ function checkForMatch() {
 }
 
 function disableCards() {
+
+  
   //its a match!!
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
@@ -66,6 +68,7 @@ function disableCards() {
       setTimeout(() => {//given a set timer to way a 1.5 seconds before it plays
         // All cards are matched, play the audio
         const allMatchedAudio = new Audio('audio-sounds/victory.mp3');
+        allMatchedAudio.volume = 0.1;
         allMatchedAudio.play();
       }, 1500);
     }
