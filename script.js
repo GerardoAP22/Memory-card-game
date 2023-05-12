@@ -27,16 +27,14 @@ let gameStarted = false;
 
 //flip card function that checks which card is being fliped first or secodn, and plays the assigned aout depending on whic card is being clicked
 
-const startButton = document.getElementById("start-button"); console.log(startButton)//this logs "null"
-const initialScreenButton = document.querySelector('.initial-screen button'); //this logs the actual start button html
+const startButton = document.getElementById("start-button"); 
+
 const initialScreen = document.querySelector('.initial-screen');
 
-
+//adds an event listener to the "Match them" button and hiddes the initial screen
 startButton.addEventListener('click', () => {
-  // initialScreen.classList.remove('hidden');
   initialScreen.classList.add('hidden');
   gameStarted = true;
-  console.log("clicked!");
   });
 
 

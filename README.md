@@ -30,6 +30,7 @@
 
  - Create a victory animation.
  - change the title of the animation once all cards are matched.
+ - once the reset is clicked it turna the cards over.
 
  ## frequent commits
 ### Commits on May 11, 2023
