@@ -7,7 +7,7 @@ const zoroSoundPath = "audio-sounds/zoro.mp3";
 const zoroAudio  = new Audio(zoroSoundPath)
 zoroAudio.volume = 0.1;
 // These lines create an Audio object for the sound file at the path audio-sounds/zoro.mp3, sets its volume to 0.1, and stores it in the zoroAudio variable
-//adjust the volume of every sound by adding volume^^^
+//adjust the volume of every sound by adding .volume^^^
 const luffySoundPath = "audio-sounds/luffy.mp3";
 const luffyAudio = new Audio(luffySoundPath)
 //  creats a new path for the audio luffy
@@ -15,6 +15,7 @@ const luffyAudio = new Audio(luffySoundPath)
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let gameStarted = false;
 //we lock the board after 2 cards are being check for matche so we cant turn more cards while they are being checkMatch
 
 
@@ -25,10 +26,29 @@ let lockBoard = false;
   // });
 
 //flip card function that checks which card is being fliped first or secodn, and plays the assigned aout depending on whic card is being clicked
-function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
 
+const startButton = document.getElementById("start-button"); console.log(startButton)//this logs "null"
+const initialScreenButton = document.querySelector('.initial-screen button'); //this logs the actual start button html
+const initialScreen = document.querySelector('.initial-screen');
+
+
+startButton.addEventListener('click', () => {
+  // initialScreen.classList.remove('hidden');
+  initialScreen.classList.add('hidden');
+  gameStarted = true;
+  console.log("clicked!");
+  });
+
+
+
+function flipCard() {
+ 
+// first checks if the board is locked
+  if (lockBoard) return;
+
+  //then checks if the card clicked is the same as the firstCard that was flipped ovder 
+  if (this === firstCard) return;
+//if the conditios above are false it will add a flip function to the card
   this.classList.add('flip')
   
 
@@ -43,6 +63,7 @@ function flipCard() {
     hasFlippedCard = false;
     secondCard = this;
   luffyAudio.play();
+  //checkForMatch function is called only after the second card has been clicked
     checkForMatch();
   }
 
@@ -56,16 +77,18 @@ function checkForMatch() {
 
 function disableCards() {
 
-  
   //its a match!!
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
-  //if its a match it stops the card to be clicked again
+  //if its a match it stops the card to be clicked again^^^
+
+
+  //resetBoard after two cards have been clicked it puts it back to initial stat of the lockboard and hasFlipped
   resetBoard();
     // Check if all cards are matched
     const matchedCards = document.querySelectorAll('.flip');
     if (matchedCards.length === cards.length) {
-      setTimeout(() => {//given a set timer to way a 1.5 seconds before it plays
+      setTimeout(() => {//given a set timer to wait a 1.5 seconds before it plays
         // All cards are matched, play the audio
         const allMatchedAudio = new Audio('audio-sounds/victory.mp3');
         allMatchedAudio.volume = 0.1;
@@ -84,7 +107,7 @@ function unflipCards() {
   }, 1500);
   //if cards dont match it will unflip them after 1.5s
 
-}//the state of the board eveytime there is a click
+}//stat of the board after evey secondCard has been clicked
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
@@ -92,15 +115,17 @@ function resetBoard() {
 //randomizing the position of each card for every new game
 (function shuffle(){
   cards.forEach(card => {
-    let randomPos = Math.floor (Math.random() * 12)
-    card.style. order = randomPos;
+    let randomPos = Math.floor (Math.random() * 12)//Math.random give  a number between 0 and 1 and then multiplys it wiht 12 // then math.floor will round up the number to the nearest integer
+    card.style.order = randomPos
   });
 }  )();
 
+
+//button that restarts the game from the begining
 document.getElementById('reset-game').addEventListener('click',function(){
   window.location.reload();
   return  false;
-});//button that restarts the game from the begining
+});
 
 //calls the function that flips name
 cards.forEach(card => card.addEventListener('click', flipCard))
