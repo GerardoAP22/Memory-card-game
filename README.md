@@ -33,6 +33,11 @@
  - once the reset is clicked it turna the cards over.
 
  ## frequent commits
+ 
+ ### Commits on May 12, 2023
+
+- README ready mvp met, some strech goals met
+
 ### Commits on May 11, 2023
 
 - mvps met added sounds to first and second click with a victory sound;
